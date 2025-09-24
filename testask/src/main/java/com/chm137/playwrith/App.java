@@ -11,12 +11,13 @@ public class App {
             Browser browser = playwright.chromium().launch();
             Page page = browser.newPage();
 
+            // Решил добавить ожидание загрузки страницы и холд 2 секунды, так как страница грузится не сразу, возникали ошибки в тесте. 
             page.navigate("https://playwright.dev", new Page.NavigateOptions().setWaitUntil(WaitUntilState.NETWORKIDLE));
             page.waitForTimeout(2000);
 
             String actualTitle = page.title();
             String expectedTitle = "Fast and reliable end-to-end testing for modern web apps | Playwright";
-            // System.out.println(page.title());
+            // System.out.println(page.title()); // Принт для самопроверки
             
             if (actualTitle.equals(expectedTitle)) {
             System.out.println("Тест на chromium пройден! Заголовок корректен: " + actualTitle);
