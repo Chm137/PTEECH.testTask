@@ -1,4 +1,4 @@
-# PTEECH.testTask
+# *PTEECH.testTask*
 
 Тестовое задание для PTEECH
 
