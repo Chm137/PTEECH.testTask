@@ -128,7 +128,7 @@ public class Balls {
         }
     }
     
-    // Вспомогательный метод для получения русского названия цвета
+    // Вспомогательный метод для получения названия цвета
     private String getColorName(String color) {
         switch (color) {
             case "red": return "красный";
